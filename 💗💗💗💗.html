@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heyvanlar</title>
+</head>
+<body>
+
+<script>
+
+  let cat = {
+    name: "Cookie",
+    type: "cat",
+    age: 3,
+    voice: "miau",
+    salamla: function () {
+      console.log(`Mənim adım ${this.name}, ${this.voice}!`);
+    }
+  };
+
+  let dog = {
+    name: "Mikey",
+    type: "Dog",
+    age: 5,
+    voice: "hav",
+    salamla: function () {
+      console.log(`Mənim adım ${this.name}, ${this.voice}!`);
+    }
+  };
+
+  let elephant = {
+    name: "Miracle",
+    type: "elephant",
+    age: 10,
+    voice: "vııı",
+    salamla: function () {
+      console.log(`Mənim adım ${this.name}, ${this.voice}!`);
+    }
+  };
+
+ 
+  let animals = [cat, dog, elephant];
+
+  animals.forEach(function (animal) {
+    animal.salamla();
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+let ededler = [3, 7, 6, 5, 8, 2];
+console.log("Massiv elementləri:");
+for (let i = 0; i < ededler.length; i++) {
+  console.log(ededler[i]);
+}
+
+
+console.log("Massivdə cüt ədədlər:");
+for (let i = 0; i < ededler.length; i++) {
+  if (ededler[i] % 2 === 0) {
+    console.log(ededler[i]);
+  }
+}
+
+let sum = 0;
+for (let i = 0; i < ededler.length; i++) {
+  sum += ededler[i];
+}
+console.log("Massivdə sum: " + sum);
+
+ededler.push(10);
+console.log("Yeni massiv:");
+for (let i = 0; i < ededler.length; i++) {
+  console.log(ededler[i]);
+}
+
+</script>
+</html>

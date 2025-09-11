@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<p>Təsvir: student adlı obyekt yarat. İçində ad, sinif
+     və ünvan sahələri olsun. Ünvan obyekt şəklində olsun
+      və küçə + şəhər sahələrindən ibarət olsun.</p>
+</body>
+<script>
+    let student = {
+        name: "Arzu",
+        age : 15,
+        place:{
+            street: "14 iyul",
+            town: "Quba"
+        }
+    }
+
+    let copy = {...student, name: "Samir" , town: "baku"}
+    console.log(student)
+    console.log(copy)
+
+</script>
+
+</html>
+
+

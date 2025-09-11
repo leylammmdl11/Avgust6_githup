@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+function checkEvenOrOdd(number) {
+  if (number % 2 === 0) {
+    console.log(number + " cütdür.");
+  } else {
+    console.log(number + " təkdir.");
+  }
+}
+
+
+function checkPositiveOrNegative(number) {
+  if (number > 0) {
+    console.log(number + " müsbətdir.");
+  } else if (number < 0) {
+    console.log(number + " mənfidir.");
+  } else {
+    console.log("Ədəd sıfırdır.");
+  }
+}
+
+
+function listDivisors(number) {
+  console.log(number + " ədədinin bölənləri:");
+  for (let i = 1; i <= Math.abs(number); i++) {
+    if (number % i === 0) {
+      console.log(i);
+    }
+  }
+}
+
+
+let userNumber = prompt("Zəhmət olmasa bir ədəd daxil edin:");
+userNumber = parseInt(userNumber);
+
+if (!isNaN(userNumber)) {
+  checkEvenOrOdd(userNumber);
+  checkPositiveOrNegative(userNumber);
+  listDivisors(userNumber);
+} else {
+  console.log("Zəhmət olmasa düzgün ədəd daxil edin!");
+}
+</script>
+</html>
