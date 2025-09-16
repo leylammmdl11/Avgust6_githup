@@ -32,7 +32,7 @@ function faktorial(n) {
 function boyukHerfleYaz(str) {
   return str
     .split(" ")
-    .map(soz => soz.charAt(0).toUpperCase() + soz.slice(1))
+    x?
     .join(" ");
 }
 
@@ -44,5 +44,5 @@ console.log(enBoyuk(7, 3));
 console.log(cutYoxsaTek(8));    
 console.log(cutYoxsaTek(5));    
 console.log(faktorial(5));        
-console.log(boyukHerfleYaz("leyla javascript oyrenir")); 
+
 
