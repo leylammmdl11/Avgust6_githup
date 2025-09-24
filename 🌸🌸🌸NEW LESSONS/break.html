@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="az">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ConvertFlow Updates — Simple</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrap {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        header a {
+            font-size: 14px;
+            color: blue;
+            text-decoration: none;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            padding: 10px;
+            background: #fff;
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 4px;
+        }
+
+        .meta {
+            font-size: 12px;
+            color: gray;
+            margin-top: 6px;
+        }
+
+        .title {
+            font-size: 15px;
+            font-weight: bold;
+            margin: 8px 0;
+        }
+
+        .author {
+            font-size: 13px;
+            color: gray;
+        }
+
+        footer {
+            background: #222;
+            color: #aaa;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        footer h4 {
+            color: #fff;
+            margin: 10px 0 5px;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        footer li {
+            font-size: 13px;
+            padding: 3px 0;
+        }
+
+        footer .cols {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        footer .legal {
+            margin-top: 15px;
+            font-size: 12px;
+            color: #777;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <h1>ConvertFlow Updates</h1>
+            <a href="#">See product updates →</a>
+        </header>
+
+        <section class="cards">
+            <div class="card">
+                <img src="https://i.pinimg.com/736x/6f/44/d5/6f44d58aa670930d2b9cbb16e63d83ef.jpg" alt="Spring 2023">
+                <div class="meta">Updates</div>
+                <div class="title">Spring 2023 Product Update</div>
+                <div class="author">Jonathan Denney – Co-Founder & CTO</div>
+            </div>
+
+            <div class="card">
+                <img src="https://i.pinimg.com/1200x/eb/05/d7/eb05d7f6cafaa6811bebc64410f999aa.jpg" alt="Fall 2022">
+                <div class="meta">Updates</div>
+                <div class="title">Fall 2022 Update: The New ConvertFlow</div>
+                <div class="author">Jonathan Denney – Co-Founder & CTO</div>
+            </div>
+
+            <div class="card">
+                <img src="https://i.pinimg.com/736x/d4/22/e5/d422e561bb1ec35d695e92b11ee6a2d9.jpg" alt="Spring 2022">
+                <div class="meta">Updates</div>
+                <div class="title">Spring 2022 Update: Product Recommendations</div>
+                <div class="author">Jonathan Denney – Co-Founder & CTO</div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="wrap">
+            <div class="cols">
+                <div>
+                    <h4>Platform</h4>
+                    <ul>
+                        <li>Integrations</li>
+                        <li>Templates</li>
+                        <li>Pricing</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Tools</h4>
+                    <ul>
+                        <li>Form builder</li>
+                        <li>Popup maker</li>
+                        <li>Survey maker</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Company</h4>
+                    <ul>
+                        <li>Jobs</li>
+                        <li>Contact us</li>
+                        <li>Write for us</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="legal">Terms of Use • Privacy Policy • GDPR</div>
+        </div>
+    </footer>
+</body>
+<script>
+    // Break
+for (let i = 1; i <= 10; i++) {
+  console.log(i);
+  if (i === 5) break;
+}
+
+// Continue
+for (let i = 1; i <= 10; i++) {
+  if (i === 5) continue;
+  console.log(i);
+}
+</script>
+
+</html>
