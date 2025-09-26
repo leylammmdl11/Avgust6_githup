@@ -1,2 +1,3 @@
 let students = ["leyla" , "aylin", "medine", "zehra", "arzu"]
-console.log(students[2])
+students[2] = "Classified"
+console.log(students)
