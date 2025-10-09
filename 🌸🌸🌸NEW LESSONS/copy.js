@@ -1,4 +1,4 @@
-const original = [1, 2, 3, 4, 5];
+const original = [6, 9, 45, 98, 34];
 const copy = [...original]; 
 for (let i = 0; i < copy.length; i++) {
   copy[i] = copy[i] * 2;
