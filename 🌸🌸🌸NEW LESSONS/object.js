@@ -1,7 +1,7 @@
 let user = {
     name: "Leyla",
     gender: "female",
-    birthday: "2011-Jan-03"
+    age: 11
 };
 
-console.log(user.birthday);
+console.log(user.age);
