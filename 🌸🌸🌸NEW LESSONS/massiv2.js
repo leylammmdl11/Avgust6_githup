@@ -1,0 +1,12 @@
+let arr = [3, 1, 4, 2];
+arr.push(5);
+arr.pop();
+arr.unshift(0);
+arr.shift();
+let a = arr.find((x) => { return x > 2 });
+let b = arr.filter((x) => { return x % 2 === 0 });
+let c = arr.map((x) => { return x * 2 });
+arr.forEach((x, y) => { console.log(x, y) });
+let d = arr.sort((x, y) => { return x - y });
+let e = arr.reverse();
+let f = arr.join("-");
