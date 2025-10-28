@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  console.log("tap 1");
+function removeDuplicates(arr) {
+  return [...new Set(arr)];
+}
+
+let numbers = [1, 2, 2, 3, 4, 4, 4, 5];
+console.log("Təkrarsız massiv:", removeDuplicates(numbers)); 
+
+console.log("tap 2");
+function countWords(words) {
+  let map = new Map();
+  for (let word of words) {
+    map.set(word, (map.get(word) || 0) + 1);
+  }
+  console.log("Sözlərin təkrarlanma sayı:");
+  for (let [word, count] of map) {
+    console.log(`${word} = ${count}`);
+  }
+}
+let fruits = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple'];
+countWords(fruits);
+
+
+</script>
+</html>

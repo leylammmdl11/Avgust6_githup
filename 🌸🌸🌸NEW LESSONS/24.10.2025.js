@@ -12,6 +12,8 @@ let student = {
 };
 student.fullName = "Leyla Memmedli";
 console.log(student.fullName); 
+
+
 let product = {
   name: "Book",
   priceUSD: 10,
