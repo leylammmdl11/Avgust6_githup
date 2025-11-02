@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funksiya və Class müqayisəsi</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #3b2a59, #c3a6ff);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #222;
+      gap: 15px;
+    }
+
+    h3 {
+      background: #ede3ff;
+      padding: 10px 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+      color: #4a3b6f;
+      font-size: 16px;
+      text-align: center;
+      width: 600px;
+      line-height: 1.6;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 650px;
+      background: #f8f5ff;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    th {
+      background: #7d5fb2;
+      color: white;
+      padding: 14px;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    td {
+      text-align: center;
+      padding: 12px;
+      border-bottom: 1px solid #dcd1f3;
+      font-size: 16px;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:hover {
+      background-color: #ede3ff;
+      transition: 0.3s;
+    }
+
+    caption {
+      caption-side: top;
+      margin-bottom: 10px;
+      font-weight: bold;
+      font-size: 20px;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <h3>
+    ✅ → yaxşı, uyğun; ❌ → pis, uyğun deyil;⚠️ → orta səviyyə, bəzən olur, bəzən olmur
+  </h3>
+
+  <table>
+    <caption>✨ Funksiya vs Class müqayisəsi</caption>
+    <tr>
+      <th>Mövzu</th>
+      <th>Funksiya</th>
+      <th>Class</th>
+    </tr>
+    <tr>
+      <td>Sadə əməliyyatlar üçün</td>
+      <td>✅</td>
+      <td>❌</td>
+    </tr>
+    <tr>
+      <td>Böyük, əlaqəli obyektlər üçün</td>
+      <td>❌</td>
+      <td>✅</td>
+    </tr>
+    <tr>
+      <td>Kodun yenidən istifadəsi</td>
+      <td>⚠️</td>
+      <td>✅</td>
+    </tr>
+    <tr>
+      <td>Strukturlaşdırılmış yazılış</td>
+      <td>❌</td>
+      <td>✅</td>
+    </tr>
+    <tr>
+      <td>Yaddaş səmərəliliyi</td>
+      <td>❌</td>
+      <td>✅</td>
+    </tr>
+    <tr>
+      <td>Oxunaqlılıq</td>
+      <td>⚠️</td>
+      <td>✅</td>
+    </tr>
+    <tr>
+      <td>Irsiyyət (inheritance)</td>
+      <td>❌</td>
+      <td>✅</td>
+    </tr>
+    <tr>
+      <td>Kiçik skriptlər üçün uyğunluq</td>
+      <td>✅</td>
+      <td>⚠️</td>
+    </tr>
+  </table>
+
+  <script>
+ 
+    class Student {
+      constructor(name, age, grade) {
+        this.name = name;
+        this.age = age;
+        this.grade = grade;
+      }
+
+      introduce() {
+        console.log(`${this.name}, ${this.grade} sinfində oxuyur.`);
+      }
+    }
+
+    const student1 = new Student("Leyla", 14, "9A");
+    student1.introduce();
+
+
+    function createCar(brand, model) {
+      let car = {
+        brand: brand,
+        model: model,
+        start: function () {
+          console.log(`${car.brand} ${car.model} işə düşdü.`);
+        }
+      };
+      car.start();
+    }
+
+    createCar("BMW", "X5");
+    createCar("Mercedes", "C200");
+
+
+
+    class Car {
+      constructor(brand, model) {
+        this.brand = brand;
+        this.model = model;
+      }
+
+      start() {
+        console.log(`${this.brand} ${this.model} işə düşdü.`);
+      }
+    }
+
+    const car1 = new Car("BMW", "X5");
+    const car2 = new Car("Mercedes", "C200");
+
+    car1.start();
+    car2.start();
+
+    console.log("Metodlar eynidirmi?", car1.start === car2.start);
+  </script>
+</body>
+
+</html>
