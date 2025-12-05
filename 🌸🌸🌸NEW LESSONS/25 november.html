@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <title>User List</title>
+</head>
+
+<body>
+
+<ul>
+  <li class="user">Aysel</li>
+  <li class="user">Murad</li>
+  <li class="user">Nigar</li>
+</ul>
+
+<script>
+  const users = document.querySelectorAll('.user');
+
+  users.forEach(item => {
+    console.log(item.textContent);
+    item.style.background = "#d0f0ff"; 
+  });
+</script>
+
+</body>
+</html>

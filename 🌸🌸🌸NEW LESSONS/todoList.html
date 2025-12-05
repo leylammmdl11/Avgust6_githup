@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Green To-Do + Products</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #e6f2e6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 0;
+    }
+
+    .todo-box {
+      background: #d9f0d9;
+      border-radius: 20px;
+      padding: 30px 25px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 6px 15px rgba(34, 139, 34, 0.25);
+      margin-bottom: 50px;
+    }
+
+    h1 {
+      color: #228B22;
+      text-align: center;
+      margin-top: 0;
+      font-weight: 600;
+    }
+
+    .add-row {
+      display: flex;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    input {
+      flex: 1;
+      padding: 10px 12px;
+      border-radius: 15px;
+      border: 1px solid #228B22;
+      outline: none;
+      font-size: 15px;
+    }
+
+    button {
+      padding: 10px 15px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+
+    .btn-add {
+      background: linear-gradient(135deg, #32CD32, #228B22);
+      color: white;
+    }
+
+    .btn-add:hover {
+      opacity: 0.85;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f0fff0;
+      padding: 12px 15px;
+      border-radius: 15px;
+      margin-bottom: 12px;
+    }
+
+    .actions button {
+      margin-left: 8px;
+      padding: 6px 10px;
+      font-size: 13px;
+      border-radius: 8px;
+    }
+
+    .btn-check {
+      background: #228B22;
+      color: white;
+    }
+
+    .btn-delete {
+      background: #9ACD32;
+      color: white;
+    }
+
+    .done {
+      text-decoration: line-through;
+      color: #555;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 900px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .shop-item {
+      border: 1px solid #a8d5a8;
+      width: 200px;
+      border-radius: 20px;
+      background: #f0fff0;
+      overflow: hidden;
+      transition: 0.2s;
+    }
+
+    .shop-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(34, 139, 34, 0.3);
+    }
+
+    .shop-item img {
+      width: 100%;
+      height: 130px;
+      object-fit: cover;
+    }
+
+    .shop-item h3,
+    .shop-item .desc,
+    .shop-item .price {
+      padding: 5px 10px;
+      margin: 5px 0;
+      color: #006400;
+    }
+
+    .shop-item .price {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="todo-box">
+    <h1>To-Do List</h1>
+
+    <div class="add-row">
+      <input type="text" placeholder="Yeni vəzifə əlavə et...">
+      <button class="btn-add">Add</button>
+    </div>
+
+    <ul>
+      <li>
+        <span>list 1</span>
+        <div class="actions">
+          <button class="btn-check">Check</button>
+          <button class="btn-delete">Delete</button>
+        </div>
+      </li>
+
+      <li>
+        <span>list 2</span>
+        <div class="actions">
+          <button class="btn-check">Check</button>
+          <button class="btn-delete">Delete</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="container"></div>
+
+  <script>
+    const input = document.querySelector("input");
+    const addBtn = document.querySelector(".btn-add");
+    const ul = document.querySelector("ul");
+
+    function addTask(text) {
+      const li = document.createElement("li");
+      li.innerHTML = `
+        <span>${text}</span>
+        <div class="actions">
+          <button class="btn-check">Check</button>
+          <button class="btn-delete">Delete</button>
+        </div>
+      `;
+      ul.append(li);
+    }
+
+    addBtn.onclick = function () {
+      if (input.value.trim() !== "") {
+        addTask(input.value);
+        input.value = "";
+      }
+    };
+
+    document.addEventListener("click", function (e) {
+      if (e.target.classList.contains("btn-check")) {
+        const span = e.target.closest("li").querySelector("span");
+        if (span.classList.contains("done")) {
+          span.classList.remove("done");
+        } else {
+          span.classList.add("done");
+        }
+      }
+    });
+
+    const products = [
+      { img: "https://i.pinimg.com/1200x/2a/ef/af/2aefaf257633b98a0ef591ddf4e69813.jpg", 
+      name: "Necklace", 
+      desc: "from beautiful stones", 
+      price: "25 AZN" },
+      { img: "https://i.pinimg.com/1200x/07/f7/44/07f744a523dcdd750c0e15ea9c29b5af.jpg", 
+      name: "Bracelet", 
+      desc: "handmade jewelry", 
+      price: "18 AZN" },
+      { img: "https://i.pinimg.com/736x/2c/14/83/2c1483fd0d3769beaa3c0ca2bccb1e74.jpg", 
+      name: "Ring", 
+      desc: "silver-plated ring", 
+      price: "12 AZN" },
+      { img: "https://i.pinimg.com/736x/0b/40/c3/0b40c355d49406830fabc1579603fa30.jpg", 
+      name: "Hairpin", 
+      desc: "cute stylish hairpin", 
+      price: "5 AZN" },
+      { img: "https://i.pinimg.com/736x/74/4a/47/744a471391b35a3584f3f658bea53b0d.jpg", 
+      name: "Earrings", 
+      desc: "classic earrings", 
+      price: "14 AZN" },
+      { img: "https://i.pinimg.com/1200x/b8/90/08/b890087ab309cd307405775b19d3f564.jpg", 
+      name: "Brooch", 
+      desc: "handmade brooch", 
+      price: "9 AZN" },
+      { img: "https://i.pinimg.com/1200x/2c/ed/cc/2cedccfb9af99fe228501cb32060ef1a.jpg", 
+      name: "Glasses", 
+      desc: "from beautiful stones", 
+      price: "25 AZN" },
+      { img: "https://i.pinimg.com/1200x/c5/cd/0e/c5cd0eb895168bb76861860d6e5390ab.jpg", 
+      name: "Watch", 
+      desc: "handmade jewelry", 
+      price: "18 AZN" },
+      
+    ];
+
+    const container = document.querySelector(".container");
+
+    products.forEach(item => {
+      const div = document.createElement("div");
+      div.classList.add("shop-item");
+      div.innerHTML = `
+        <img src="${item.img}">
+        <h3>${item.name}</h3>
+        <p class="desc">${item.desc}</p>
+        <p class="price">${item.price}</p>
+      `;
+      container.append(div);
+    });
+  </script>
+
+</body>
+
+</html>
+

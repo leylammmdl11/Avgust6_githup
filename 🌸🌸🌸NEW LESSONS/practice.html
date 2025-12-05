@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #clickable {
+            padding: 10px 30px;
+            font-size: 35px;
+            border: none;
+            background-color: darkblue;
+            color: white;
+            border-radius: 10px;
+        }
+
+        #clickable:hover {
+            background-color: rgba(0, 0, 139, 0.77);
+        }
+    </style>
+</head>
+
+<body>
+    <button id="clickable">Click me</button>
+    <script>
+        let btn = document.getElementById("clickable");
+        btn.addEventListener("click", (e) => {
+            console.log(e);
+            document.body.classList.toggle("active");
+        });
+    </script>
+</body>
+
+</html>

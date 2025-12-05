@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Sunset Studio — Creative Work</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, Arial, sans-serif;
+            background: #f6f8f9;
+            color: #243233;
+            line-height: 1.5;
+        }
+
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(6px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            z-index: 20;
+        }
+
+        .nav-inner {
+            max-width: 1100px;
+            display: flex;
+            align-items:center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            font-weight: 800;
+            color: #2f5f63;
+            font-size: 18px;
+        }
+
+        .menu a {
+            margin-left: 22px;
+            text-decoration: none;
+            font-weight: 600;
+            color: #7d8a8c;
+            font-size: 13px;
+        }
+
+        .menu a.active {
+            color: #e24c1b;
+        }
+
+        .hero {
+            margin-top: 64px;
+            height: 56vh;
+            background-image:url(https://i.pinimg.com/1200x/c6/e5/3c/c6e53ca9ac2b57ecc14a5748bdaeded1.jpg);
+            background-size: cover;
+            background-position: center 20%;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            box-shadow: 0 6px 20px rgba(15, 25, 30, 0.12);
+        }
+
+        .hero-inner {
+            max-width: 900px;
+        }
+
+        .hero h1 {
+            font-size: 44px;
+            font-weight: 800;
+            margin: 0 0 10px;
+        }
+
+        .hero p {
+            margin: 0 0 22px;
+            letter-spacing: 0.1em;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 22px;
+            border-radius: 999px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(90deg, #ff6a2b, #e24c1b);
+            color: #fff;
+            box-shadow: 0 6px 15px rgba(226, 76, 27, 0.25);
+        }
+
+        .btn-ghost {
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .intro {
+            max-width: 1100px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 30px 24px;
+            text-align: center;
+            border-radius: 14px;
+            box-shadow: 0 6px 20px rgba(15, 25, 30, 0.12);
+        }
+
+        .intro h2 {
+            color: #2f5f63;
+            margin-bottom: 8px;
+        }
+
+        .intro p {
+            color: #7d8a8c;
+        }
+
+        .services {
+            max-width: 1100px;
+            margin: 40px auto 80px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.96);
+            border-radius: 12px;
+            padding: 26px 20px;
+            text-align: center;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .img-box {
+            width: 86px;
+            height: 86px;
+            margin: 0 auto 16px;
+            background: #eceeef;
+            border-radius: 14px;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            color: #2f5f63;
+            margin: 8px 0;
+        }
+
+        .card p {
+            color: #7d8a8c;
+            font-size: 14px;
+            margin-bottom: 16px;
+            flex: 1;
+        }
+
+        .card a {
+            align-self: center;
+            background: #2f6b66;
+            color: #fff;
+            padding: 10px 18px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        @media(max-width:900px) {
+            .services {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+        }
+
+        @media(max-width:560px) {
+            .services {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                height: 60vh;
+            }
+
+            .hero h1 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="nav">
+        <div class="nav-inner">
+            <div class="brand">Sunset Studio</div>
+            <nav class="menu">
+                <a href="#" class="active">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Projects</a>
+                <a href="#">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="hero-inner">
+            <h1>We Inspire Creative Ideas</h1>
+            <p>Fresh concepts for real-world projects</p>
+            <a class="btn btn-primary" href="#">Get Started</a>
+            <a class="btn btn-ghost" href="#">View Portfolio</a>
+        </div>
+    </section>
+    <section class="intro">
+        <h2>Interesting things start here</h2>
+        <p>We blend design, research, and creative strategy to shape unforgettable work.</p>
+    </section>
+    <section class="services">
+        <div class="card">
+            <div class="img-box">
+                <img src="https://cdn-icons-png.flaticon.com/128/4238/4238912.png" alt="Service icon">
+            </div>
+            <h3>Interactive Websites</h3>
+            <p>Clean, modern and engaging digital experiences built for all users.</p>
+            <a href="#">More</a>
+        </div>
+        <div class="card">
+            <div class="img-box">
+                <img src="https://cdn-icons-png.flaticon.com/512/4746/4746541.png" alt="Research icon">
+            </div>
+            <h3>Creative Research</h3>
+            <p>We turn insights into ideas that shape the future of your brand.</p>
+            <a href="#">More</a>
+        </div>
+        <div class="card">
+            <div class="img-box">
+                <img src="https://cdn-icons-png.flaticon.com/512/5988/5988955.png" alt="Strategy icon">
+            </div>
+            <h3>Smart Strategy</h3>
+            <p>Clear planning, fast execution, and solutions that actually work.</p>
+            <a href="#">More</a>
+        </div>
+        <div class="card">
+            <div class="img-box">
+                <img src="https://cdn-icons-png.flaticon.com/512/4504/4504123.png" alt="Marketing icon">
+            </div>
+            <h3>Bold Campaigns</h3>
+            <p>Impactful messaging and visuals designed to stand out anywhere.</p>
+            <a href="">More</a>
+        </div>
+    </section>
+</body>
+
+</html>

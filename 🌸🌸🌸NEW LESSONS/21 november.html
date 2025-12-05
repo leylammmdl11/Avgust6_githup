@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <title> List</title>
+</head>
+<body>
+
+<h1>GeForce 20</h1>
+
+<ul>
+    <li>GTX 1650</li>
+    <li>GTX 1660</li>
+    <li class="primary">GTX 1660 Ti</li>
+    <li>RTX 2070</li>
+    <li>RTX 2080</li>
+    <li class="primary">RTX 2080 Ti</li>
+</ul>
+
+<script>
+    document.querySelector("h1").remove();
+    const ul = document.querySelector("ul");
+    const li = document.createElement("li");
+    li.textContent = "TITAN RTX";
+    ul.append(li);
+</script>
+
+</body>
+</html>

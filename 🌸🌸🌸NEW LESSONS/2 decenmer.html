@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Shopping List</title>
+<style>
+  .shopping-list button {
+    border: none;
+    background: none;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  .done {
+    color: #fc5a5a;
+  }
+</style>
+</head>
+<body>
+
+<ul class="shopping-list">
+  <li><button>Milk</button></li>
+  <li><button>Butter</button></li>
+  <li><button>Bread</button></li>
+  <li><button>Cheese</button></li>
+</ul>
+
+<script>
+  const buttons = document.querySelectorAll('.shopping-list button');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('done');
+    });
+  });
+</script>
+
+</body>
+</html>
