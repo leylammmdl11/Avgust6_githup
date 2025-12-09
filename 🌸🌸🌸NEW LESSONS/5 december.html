@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopping List</title>
+<style>
+  .shopping-list button {
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<ul class="shopping-list">
+<li><button>Milk</button></li>
+<li><button>Butter</button></li>
+<li><button>Bread</button></li>
+<li><button>Cheese</button></li>
+</ul>
+<script>
+let btns = document.querySelectorAll(".shopping-list button")
+btns.forEach((btn) => {
+btn.addEventListener("click", clickBtn)
+})
+function clickBtn(e) {
+let r = Math.floor(Math.random() * 256)
+let g = Math.floor(Math.random() * 256)
+let b = Math.floor(Math.random() * 256)
+e.target.style.color = `rgb(${r}, ${g}, ${b})`}
+console.log(e.target.style.color);
+</script>
+</body>
+</html>

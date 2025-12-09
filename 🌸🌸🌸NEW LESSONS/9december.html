@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <body>
+        <button id="btn1">Click</button>
+        <div id="box" style="width:120px;height:120px;background:#e4a9fc;margin-top:20px;"></div>
+        <img id="img" src="https://i.pinimg.com/736x/20/2e/5b/202e5badbf3865f972596208c0aee40b.jpg" width="150"
+            style="margin-top:20px;">
+        <button id="btn2" style="display:block;margin-top:20px;">Count</button>
+        <p id="countText">You clicked 0 times</p>
+        <script>
+            document.getElementById("btn1").onclick = function () {
+                console.log("Clicked!");
+            };
+            document.getElementById("box").onclick = function () {
+                this.style.background = "#f3fca9";
+            };
+            document.getElementById("img").onclick = function () {
+                this.src = "https://i.pinimg.com/736x/0a/f7/90/0af7902aac1d4da100a64c2931dae540.jpg";
+            };
+            let count = 0;
+            document.getElementById("btn2").onclick = function () {
+                count++;
+                document.getElementById("countText").textContent = "You clicked " + count + " times";
+            };
+
+        </script>
+    </body>
+</body>
+
+</html>
