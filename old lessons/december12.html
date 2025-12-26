@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <title>Coffee Theme Form</title>
+    <style>
+        body {
+            background-color: #f3e9dc;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #6f4e37; 
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            color: #fff;
+            width: 300px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 8px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 8px;
+            background-color: #d9a066; 
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #c58b4e;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="simpleForm">
+        <label>Ad:</label>
+        <input type="text" id="firstname">
+
+        <label>Soyad:</label>
+        <input type="text" id="lastname">
+
+        <button type="submit">Göndər</button>
+    </form>
+
+<script>
+let form = document.getElementById("simpleForm");
+let fN = document.getElementById("firstname");
+let lN = document.getElementById("lastname");
+
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    alert("Ad: " + fN.value + "\nSoyad: " + lN.value);
+});
+</script>
+
+</body>
+</html>

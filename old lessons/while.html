@@ -1,16 +1,352 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>title</title>
+    <title>E-commerce</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .top-sale {
+            background: #dc3545;
+            color: white;
+            text-align: center;
+            padding: 6px 0;
+            font-size: 14px;
+            letter-spacing: .5px;
+        }
+
+        nav {
+            padding: 18px 0 !important;
+            font-size: 15px;
+            border-bottom: 1px solid #ececec;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        .nav-link {
+            padding: 8px 14px !important;
+            font-weight: 500;
+            color: #333 !important;
+        }
+
+        .search-box {
+            width: 290px;
+        }
+
+        .search-box input {
+            border-radius: 8px;
+            height: 38px;
+            border: 1px solid #cfcfcf;
+            padding-left: 14px;
+        }
+
+        .login-btn {
+            border: 1px solid #222;
+            border-radius: 6px;
+            padding: 6px 18px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+
+        .section-title {
+            width: 90%;
+            margin: 40px auto 10px auto;
+            font-size: 26px;
+            font-weight: 700;
+        }
+
+        .badge-featured {
+            color: #dc3545;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .carousel-item img {
+            height: 520px;
+            object-fit: cover;
+        }
+
+        .collection-container {
+            width: 90%;
+            margin: 30px auto 70px auto;
+            display: grid;
+            grid-template-columns: 1.6fr 1fr;
+            gap: 20px;
+        }
+
+        .collection-left {
+            background: #f8f8f8;
+            border-radius: 14px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .collection-left img {
+            width: 80%;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+
+        .collection-left h3 {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .collection-left span {
+            font-size: 15px;
+            font-weight: 500;
+            color: #444;
+        }
+
+        .collection-right {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .right-box {
+            background: #f8f8f8;
+            border-radius: 14px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .right-box img {
+            width: 60%;
+            margin-bottom: 18px;
+        }
+
+        .right-box h4 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .right-box span {
+            font-size: 15px;
+            color: #444;
+        }
+
+
+        .promo-section {
+            width: 90%;
+            margin: 20px auto 80px auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .promo-left {
+            width: 100%;
+            height: 400px;
+        }
+
+        .promo-left img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .promo-right {
+            background: #f9d996;
+            padding: 40px;
+
+        }
+
+        .promo-right small {
+            color: #dc3545;
+            font-weight: 700;
+        }
+
+        .promo-right h2 {
+            font-size: 34px;
+            font-weight: 800;
+        }
+
+        .timer {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .timer-box {
+            text-align: center;
+            padding: 10px 20px;
+            background: white;
+            border-radius: 10px;
+        }
+
+        .timer-number {
+            font-size: 26px;
+            font-weight: 800;
+        }
+
+        .timer-label {
+            font-size: 12px;
+            color: #444;
+        }
+
+        .promo-btn {
+            margin-top: 20px;
+            padding: 10px 22px;
+            background: black;
+            color: white;
+            border-radius: 6px;
+            border: none;
+        }
+    </style>
 </head>
+
 <body>
-    <script>
-  let n = prompt("Neçə dəfə mesaj çıxarmaq istəyirsiniz?");
-    for (let i =0 ; i < n; i++) {
-    console.log("I know how to use cycles");
-}
-    </script>
+
+
+    <div class="top-sale">Summer Sale 50% OFF! | Free Shipping Over $150</div>
+
+    <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container">
+            <a class="navbar-brand" href="#">E-commerce</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-4">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Sign Up</a></li>
+                </ul>
+
+                <div class="ms-auto d-flex align-items-center gap-3">
+                    <div class="search-box">
+                        <input type="text" class="form-control" placeholder="What are you looking for?">
+                    </div>
+
+                    <div class="login-btn">Login</div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://i.pinimg.com/1200x/d8/fe/ba/d8feba86a3f2cb71ee6ef8d38762c701.jpg"
+                    class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="https://i.pinimg.com/1200x/f9/c3/64/f9c36472cbdd3f72a1c4cf0e5441ea16.jpg"
+                    class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="https://i.pinimg.com/1200x/96/5d/85/965d85374f42d9f6505de4b6c29261d9.jpg"
+                    class="d-block w-100">
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+
+    <div class="section-title">
+        <span class="badge-featured">Featured</span><br>
+        Shop Collection
+    </div>
+
+    <div class="collection-container">
+
+        <div class="collection-left">
+            <img src="https://i.pinimg.com/736x/76/9d/84/769d8454f78dabe81ec54e51fea6d156.jpg">
+            <h3>Headband</h3>
+            <span>Collection →</span>
+        </div>
+
+        <div class="collection-right">
+            <div class="right-box">
+                <img src="https://i.pinimg.com/736x/47/d1/9f/47d19f938ebe4fd2bf6ace4eb56a4165.jpg">
+                <h4>Earbuds</h4>
+                <span>Collection →</span>
+            </div>
+
+            <div class="right-box">
+                <img src="https://i.pinimg.com/736x/b9/68/e6/b968e6a7ec8a7f1a63b9e86156b0a55a.jpg">
+                <h4>Accessories</h4>
+                <span>Collection →</span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="section-title">
+        <span class="badge-featured">Featured</span><br>
+        Promotion
+    </div>
+
+    <div class="promo-section">
+
+        <div class="promo-left">
+            <img src="https://i.pinimg.com/736x/46/41/88/464188ef146bc447b9a3f7ff1d17cace.jpg">
+        </div>
+
+        <div class="promo-right">
+            <small>PROMOTION</small>
+            <h2>Hurry up! 40% OFF</h2>
+            <p>Thousands of high tech are waiting for you</p>
+
+            <div class="timer">
+                <div class="timer-box">
+                    <div class="timer-number">02</div>
+                    <div class="timer-label">Days</div>
+                </div>
+
+                <div class="timer-box">
+                    <div class="timer-number">12</div>
+                    <div class="timer-label">Hours</div>
+                </div>
+
+                <div class="timer-box">
+                    <div class="timer-number">45</div>
+                    <div class="timer-label">Minutes</div>
+                </div>
+
+                <div class="timer-box">
+                    <div class="timer-number">05</div>
+                    <div class="timer-label">Seconds</div>
+                </div>
+            </div>
+
+            <button class="promo-btn">Shop now</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
+
 </html>
