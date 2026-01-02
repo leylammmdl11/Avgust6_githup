@@ -3,55 +3,59 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>E-commerce | About</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
     <style>
         body {
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
 
-        .about {
-            display: flex;
-            justify-content: space-between;
-            padding: 60px;
-        }
-
-        .about-text {
-            width: 500px;
-        }
-
-        .about-img img {
-            width: 700px;
-            height: 500px;
-            border-radius: 30px;
-        }
-
-        .team {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin: 60px 0;
-        }
-
-        .member {
-            text-align: start;
-        }
-
-        .member img {
-            width: 210px;
-            height: 280px;
-            border-radius: 10px;
+        .product-image {
+            max-width: 500px;
+            width: 100%;
             object-fit: cover;
+            border-radius: 12px;
         }
 
-        .icons i {
-            margin: 5px;
-            cursor: pointer;
+        .price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
         }
 
-        body {
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+        .related-items img {
+            width: 100%;
+            height: auto;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .related-items .card {
+            border: none;
+        }
+
+        .add-cart-btn {
+            background-color: #d9534f;
+            color: white;
+            border: none;
+        }
+
+        .add-cart-btn:hover {
+            background-color: #c9302c;
+        }
+
+        .offer-price {
+            color: #d9534f;
+            font-weight: bold;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: gray;
+            margin-left: 5px;
         }
 
         .top-sale {
@@ -59,44 +63,43 @@
             color: #fff;
             text-align: center;
             padding: 6px;
-            font-size: 14px
+            font-size: 14px;
         }
 
         .navbar {
-            padding: 15px
+            padding: 15px;
         }
 
         .navbar-brand {
-            font-size: 20px
+            font-size: 20px;
         }
 
         .navbar-nav {
-            gap: 10px
+            gap: 10px;
         }
 
         .nav-link {
             color: #222;
             padding: 8px 14px;
             border-radius: 6px;
-            transition: .3s
+            transition: .3s;
         }
 
         .nav-link:hover {
             background: #dc3545;
-            color: #fff
+            color: #fff;
         }
-
 
         .search-box input {
             width: 240px;
             height: 38px;
-            border-radius: 8px
+            border-radius: 8px;
         }
 
         footer {
             background: #d9534f;
             color: #fff;
-            padding: 50px 20px
+            padding: 50px 20px;
         }
 
         .footer-container {
@@ -104,16 +107,16 @@
             margin: auto;
             display: flex;
             flex-wrap: wrap;
-            gap: 30px
+            gap: 30px;
         }
 
         .footer-section {
-            flex: 1 1 200px
+            flex: 1 1 200px;
         }
 
         .footer-section h6 {
             font-weight: bold;
-            margin-bottom: 15px
+            margin-bottom: 15px;
         }
 
         .footer-section a {
@@ -121,11 +124,11 @@
             color: #fff;
             font-size: 14px;
             margin-bottom: 8px;
-            text-decoration: none
+            text-decoration: none;
         }
 
         .footer-section a:hover {
-            text-decoration: underline
+            text-decoration: underline;
         }
 
         .subscribe-input {
@@ -137,29 +140,29 @@
             padding: 8px;
             border: 1px solid #fff;
             background: transparent;
-            color: #fff
+            color: #fff;
         }
 
         .subscribe-input button {
             background: #fff;
             color: #d9534f;
             border: none;
-            padding: 8px 12px
+            padding: 8px 12px;
         }
 
         .download-box {
             display: flex;
             gap: 15px;
-            align-items: center
+            align-items: center;
         }
 
         .qr img {
-            width: 90px
+            width: 90px;
         }
 
         .store-links img {
             width: 120px;
-            margin-bottom: 8px
+            margin-bottom: 8px;
         }
 
         .social-icons {
@@ -173,42 +176,19 @@
         }
 
         .social-icons a:hover {
-            color: #222
+            color: #222;
         }
 
         .copyright {
             text-align: center;
             margin-top: 30px;
             font-size: 13px;
-            opacity: .7
-        }
-
-        .section-title {
-            width: 90%;
-            margin: 50px auto 20px;
-            font-size: 26px;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 12px
-        }
-
-        .section-title:before {
-            content: "";
-            width: 10px;
-            height: 26px;
-            background: #dc3545;
-            border-radius: 2px
-        }
-
-        .badge-featured {
-            color: #dc3545;
+            opacity: .7;
         }
     </style>
 </head>
 
 <body>
-
     <div class="top-sale">SUMMER SALE 50% OFF | FREE SHIPPING OVER $150</div>
 
     <nav class="navbar navbar-expand-lg bg-white">
@@ -226,7 +206,6 @@
                     <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
                 </ul>
                 <div class="ms-auto d-flex align-items-center gap-3">
-
                     <div class="search-box d-flex">
                         <input class="form-control" placeholder="What are you looking for?"
                             style="border-top-right-radius:0; border-bottom-right-radius:0;">
@@ -235,81 +214,88 @@
                             <i class="bi bi-search"></i>
                         </button>
                     </div>
-
-
                     <button class="btn position-relative" style="font-size:22px;">
                         <a href="basket.html"><i class="bi bi-cart"></i></a>
                     </button>
-
-
                     <button class="btn" style="font-size:22px;">
                         <a href="profile.html"><i class="bi bi-person"></i></a>
                     </button>
-
-                   <a href="login.html" class="btn btn-outline-dark btn-sm">Login</a>
-
+                    <a href="login.html" class="btn btn-outline-dark btn-sm">Login</a>
                 </div>
-
             </div>
+        </div>
     </nav>
 
-    <section class="about">
-        <div class="about-text">
-            <h1>Our Story</h1>
-            <p>
-                Launced in 2015, Exclusive is South Asia's premier online shopping makterplace with an active presense
-                in Bangladesh. Supported by wide range of tailored marketing, data and service solutions, Exclusive has
-                10,500 sallers and 300 brands and serves 3 millioons customers across the region.
-
-                Exclusive has more than 1 Million products to offer, growing at a very fast. Exclusive offers a diverse
-                assotment in categories ranging from consumer.
-            </p>
-        </div>
-
-        <div class="about-img">
-            <img src="https://i.pinimg.com/736x/12/eb/4d/12eb4dcfd7c34a8ad7545a04af44d483.jpg" alt="Shopping">
-        </div>
-    </section>
-
-    <div class="section-title"><span class="badge-featured">Team</span> Members</div>
-    <section class="team">
-        <div class="member">
-            <img src="https://i.pinimg.com/736x/58/d2/d9/58d2d99e8829a5833dc717e8b766bb78.jpg">
-            <h4>...</h4>
-            <p>Founder & Chairman</p>
-            <div class="icons">
-                <i class="bi bi-twitter"></i>
-                <i class="bi bi-instagram"></i>
-                <i class="bi bi-linkedin"></i>
+    <div class="container my-5">
+        <div class="row mb-5">
+            <div class="col-md-6 text-center">
+                <img src="https://i.pinimg.com/1200x/2a/ef/af/2aefaf257633b98a0ef591ddf4e69813.jpg"
+                    class="product-image" alt="Havic HV G-92 Gamepad">
+            </div>
+            <div class="col-md-6">
+                <h2>Havic HV G-92 Gamepad</h2>
+                <p>⭐⭐⭐⭐☆ (150 Reviews) | <span class="text-success">In Stock</span></p>
+                <p class="price">$192.00</p>
+                <p>PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free
+                    install & mess free removal. Pressure sensitive.</p>
+                <button class="btn add-cart-btn mb-3">Add to cart</button>
+                <div>
+                    <p><i class="bi bi-truck"></i> Free Delivery</p>
+                    <p><i class="bi bi-arrow-counterclockwise"></i> Return Delivery (Free 30 Days)</p>
+                </div>
             </div>
         </div>
 
-        <div class="member">
-            <img src="https://i.pinimg.com/736x/1a/7d/b1/1a7db10ef41402654d0f8240769cd03f.jpg">
-            <h4>...</h4>
-            <p>Managing Director</p>
-            <div class="icons">
-                <i class="bi bi-twitter"></i>
-                <i class="bi bi-instagram"></i>
-                <i class="bi bi-linkedin"></i>
+        <h4>Related Items</h4>
+        <div class="row related-items">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://i.pinimg.com/736x/9d/e1/c9/9de1c91274545ab0c567c261fe92dc86.jpg"
+                        alt="Havit HV-G92">
+                    <div class="card-body text-center">
+                        <h6>HAVIT HV-G92 Gamepad</h6>
+                        <p><span class="offer-price">$120</span><span class="old-price">$160</span></p>
+                        <p>⭐⭐⭐⭐☆ (88)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://i.pinimg.com/736x/9d/6b/ac/9d6bac18d6849f84f6627d0977164097.jpg"
+                        alt="AK-900 Keyboard">
+                    <div class="card-body text-center">
+                        <h6>AK-900 Wired Keyboard</h6>
+                        <p><span class="offer-price">$960</span><span class="old-price">$1160</span></p>
+                        <p>⭐⭐⭐⭐☆ (75)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://i.pinimg.com/736x/45/3c/21/453c21d9a89c4b544302e3a200481620.jpg"
+                        alt="IPS Monitor">
+                    <div class="card-body text-center">
+                        <h6>IPS LCD Gaming Monitor</h6>
+                        <p><span class="offer-price">$370</span><span class="old-price">$400</span></p>
+                        <p>⭐⭐⭐⭐☆ (99)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://i.pinimg.com/736x/51/3b/2e/513b2ec1b1d661b6e387177e9bb863c3.jpg" alt="RGB cooler">
+                    <div class="card-body text-center">
+                        <h6>RGB liquid CPU Cooler</h6>
+                        <p><span class="offer-price">$160</span><span class="old-price">$170</span></p>
+                        <p>⭐⭐⭐⭐☆ (85)</p>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="member">
-            <img src="https://i.pinimg.com/736x/ee/e3/17/eee3174024358ca06f980e3e96a67742.jpg">
-            <h4>...</h4>
-            <p>Product Designer</p>
-            <div class="icons">
-                <i class="bi bi-twitter"></i>
-                <i class="bi bi-instagram"></i>
-                <i class="bi bi-linkedin"></i>
-            </div>
-        </div>
-    </section>
+    </div>
 
     <footer>
         <div class="footer-container">
-
             <div class="footer-section">
                 <h6>Exclusive</h6>
                 <a href="#">Subscribe</a>
@@ -319,14 +305,12 @@
                     <button type="button">→</button>
                 </div>
             </div>
-
             <div class="footer-section">
                 <h6>Support</h6>
                 <a href="#">111 Bijoy sarani, Dhaka</a>
                 <a href="mailto:exclusive@gmail.com">exclusive@gmail.com</a>
                 <a href="tel:+88015888889999">+88015-88888-9999</a>
             </div>
-
             <div class="footer-section">
                 <h6>Account</h6>
                 <a href="#">My Account</a>
@@ -335,7 +319,6 @@
                 <a href="#">Wishlist</a>
                 <a href="#">Shop</a>
             </div>
-
             <div class="footer-section">
                 <h6>Quick Link</h6>
                 <a href="#">Privacy Policy</a>
@@ -343,16 +326,13 @@
                 <a href="#">FAQ</a>
                 <a href="#">Contact</a>
             </div>
-
             <div class="footer-section">
                 <h6>Download App</h6>
                 <a href="#">Save $3 with App New User Only</a>
-
                 <div class="download-box">
                     <a href="#" class="qr">
                         <img src="https://i.pinimg.com/1200x/75/d7/06/75d706845313003903984e0a6c0aa7b2.jpg">
                     </a>
-
                     <div class="store-links">
                         <a href="#"><img
                                 src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"></a>
@@ -360,7 +340,6 @@
                                 src="https://i.pinimg.com/1200x/94/14/3f/94143f1f0cc8fadbe442176f0cbdf63d.jpg"></a>
                     </div>
                 </div>
-
                 <div class="social-icons">
                     <a href="#"><i class="bi bi-facebook"></i></a>
                     <a href="#"><i class="bi bi-twitter-x"></i></a>
@@ -368,9 +347,7 @@
                     <a href="#"><i class="bi bi-linkedin"></i></a>
                 </div>
             </div>
-
         </div>
-
         <div class="copyright">
             <a href="#" style="color:white;text-decoration:none;">
                 © Copyright Rimel 2022. All right reserved
@@ -378,7 +355,7 @@
         </div>
     </footer>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
